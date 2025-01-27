@@ -16,4 +16,22 @@ Os erros de retorno de api serão armazenados nessa tabela, faça um teste coloc
 O projeto precisa está na porta 80 na sua máquina local
 depois disso funcionarar normalmente
 
+
+
+ROTA:
+
+BUSCAR TODOS OS FILMES:
+http://localhost/L5-Networks/api/buscar_filme
+
+
+BUSCAR FILME ESPECIFICO
+http://localhost/L5-Networks/api/buscarSinopse
+
+
+
+BUSCAR ELENCO
+http://localhost/L5-Networks/api/buscarElenco
+
+
+URL BASE:
 http://localhost/L5-Networks

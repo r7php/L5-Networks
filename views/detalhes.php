@@ -9,14 +9,15 @@ $tempo_filme = $dados;//calculado no backend
 
 <div class="container my-5">
   
-  <div class="row align-items-center" style="float: center;">
+  <div class="row align-items-center">
 
     <!-- Coluna de Detalhes -->
+    
     <div class="col-md-8">
-      <img 
+        <img 
         src="<?php echo $_GET['img'] ?>" 
         class="img-fluid rounded" 
-        style="height: 400px; object-fit: cover; padding: 10px;"
+        style="height: 400px; object-fit: cover;padding: 10px;"
       >
       <div class="card">
         <div class="card-body">

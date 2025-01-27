@@ -11,23 +11,34 @@
     class apiController extends controller{
 
     public function buscarElenco(){
+        if(empty($_POST['caminho'])){
+           echo json_encode('Somente requisicao POST');
+        }else{
+
+
         $caminho = $_POST['caminho'];
         $api = new Api();
         $response = $api->buscarPersonagens($caminho);
         
         echo json_encode($response);
         exit;
+    }
         
     }   
 
  
     public function buscarSinopse(){
+         if(empty($_POST['id'])){
+           echo json_encode('id invalido, somente requisicao GET');
+        }else{
+
         $id = $_POST['id'];
         $api = new Api();
         $response = $api->buscar_detalhe($id);
         
         echo json_encode($response);
         exit;
+    }
         
     }   
 

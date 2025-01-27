@@ -52,7 +52,7 @@
                     <div class='image-container'><a href='detalhes/?id=${url_filme[1]}&&img=${img}'><img src='${img}'></a></div>
                     <h5 class="card-title" >${title}</h5>
                     <p class='date'>${release_date}</p>
-                    <button class="btn btn-primary">Detalhes</button>
+                    <a href='detalhes/?id=${url_filme[1]}&&img=${img}'><button class="btn btn-primary">Detalhes</button></a>
                     </div>
                                 
                 `;

@@ -1,38 +1,29 @@
-
 <?php 
-
-$tempo_filme = $dados;//calculado no backend
-
-
+$tempo_filme = $dados; // calculado no backend
 ?>
 
-
 <div class="container my-5">
-  
-  <div class="row align-items-center">
+  <div class="row align-items-start">
+    <!-- Coluna da Imagem -->
+    <div class="col-md-4">
+      <div class="sticky-image">
+        <img 
+          src="<?php echo $_GET['img']; ?>" 
+          class="img-fluid rounded" 
+          style="height: 400px; object-fit: cover; padding: 10px;">
+      </div>
+    </div>
 
     <!-- Coluna de Detalhes -->
-    
     <div class="col-md-8">
-        <img 
-        src="<?php echo $_GET['img'] ?>" 
-        class="img-fluid rounded" 
-        style="height: 400px; object-fit: cover;padding: 10px;"
-      >
       <div class="card">
         <div class="card-body">
           <p><strong>Lançado à </strong> <span id="movie-release-date"><?php echo $tempo_filme; ?> Anos</span></p>
         </div>
       </div>
     </div>
-    <!-- Coluna da Imagem -->
-    <div class="col-md-4 text-center">
-      
-    </div>
   </div>
 </div>
-
-
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -106,8 +97,31 @@ $tempo_filme = $dados;//calculado no backend
 </script>
 
 
+<style>
+  /* Imagem Fixa ao lado do card */
+  .fixed-image {
+    position: sticky;
+    top: 50px;  /* Ajuste a posição vertical conforme necessário */
+    width: 100%; /* Garante que a imagem não ultrapasse o limite da coluna */
+    height: 400px; /* Tamanho fixo para a imagem */
+    object-fit: cover;
+    border-radius: 10px;
+    padding: 200px;
+    z-index: 1;
+  }
+  
+  /* Ajuste a margem para evitar que o conteúdo do card sobreponha a imagem */
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
 
+  .col-md-4 {
+    padding-right: 20px;
+  }
 
-
-
+  .card-body {
+    padding-left: 20px; /* Desloca o conteúdo para a direita, garantindo que o card não sobreponha a imagem */
+  }
+</style>
 

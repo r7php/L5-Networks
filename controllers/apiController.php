@@ -10,13 +10,23 @@
 
     class apiController extends controller{
 
-    public function buscarSinopse($id){
-
+    public function buscarElenco(){
+        $caminho = $_POST['caminho'];
         $api = new Api();
-        $response = $api->buscar_detalhe();
+        $response = $api->buscarPersonagens($caminho);
         
-        $data = json_decode($response, true);
-        echo json_encode($data);
+        echo json_encode($response);
+        exit;
+        
+    }   
+
+ 
+    public function buscarSinopse(){
+        $id = $_POST['id'];
+        $api = new Api();
+        $response = $api->buscar_detalhe($id);
+        
+        echo json_encode($response);
         exit;
         
     }   
@@ -27,8 +37,7 @@
 
         $response = $api->buscar_tudo();
         
-        $data = json_decode($response, true);
-        echo json_encode($data);
+        echo json_encode($response);
         exit;
     }
 

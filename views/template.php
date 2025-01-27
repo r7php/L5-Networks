@@ -9,19 +9,29 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Filmes</title>
-    <link rel="shortcut icon" href="<?php echo BASE_URL?>assets/logo/logo.ico" >
+
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTey3oSmYFAzRaib7cmOE-3It7bN_NInyqkJg&s" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-
- <script type="text/javascript" src="assets/js/jq.js"></script>
-
-    
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  </head>
 
 <body data-base-url="<?php echo BASE_URL; ?>">
-    <style>
+
+<style>
   body{
     background: black;
   }
+
+  .fixed-image {
+  position: fixed;
+  top: 50%; 
+  right: 10px; 
+  transform: translateY(-50%); 
+  max-height: 400px; 
+  object-fit: cover;
+  z-index: 10; 
+}
   .date{
     color: red ;
   }
@@ -30,44 +40,45 @@
     font-weight: 700;
   }
    .image-container {
-      overflow: hidden; /* Para evitar que a imagem extrapole o container */
-      width: 300px; /* Largura do container */
-      height: 400px; /* Altura do container */
-      border-radius: 10px; /* Borda arredondada (opcional) */
-      transition: all 0.3s ease-in-out; /* Suaviza a transição */
+      overflow: hidden; 
+      width: 300px;
+      height: 400px; 
+      border-radius: 10px; 
+      transition: all 0.3s ease-in-out; 
     }
 
     .image-container img {
-      width: 100%; /* Faz a imagem ocupar todo o container */
+      width: 100%; 
       height: 100%;
-      object-fit: cover; /* Mantém o aspecto da imagem */
-      transition: transform 0.3s ease-in-out; /* Suaviza o zoom */
+      object-fit: cover; 
+      transition: transform 0.3s ease-in-out;
     }
 
-    /* Efeito de zoom ao passar o mouse */
+  
     .image-container:hover img {
-      transform: scale(1.2); /* Amplia a imagem em 20% */
+      transform: scale(1.2); 
     }
     .space{
       height: 100px;
     }
 </style>
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg ">
     <div class="container">
-      <a class="navbar-brand" href="#">PobreFlx</a>
+     <a href="<?php echo BASE_URL; ?>"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKks2HENkqwIHNwAsNzu5Wb7_BtYRN_3_2gA&s"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Filmes</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Series</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+        <ul class="navbar-nav ms-auto" >
+          <li class="nav-item"><a class="nav-link" href="#" style="color: red;">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" style="color: red;">Filmes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" style="color: red;">Series</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" style="color: red;">Sobre</a></li>
         </ul>
       </div>
     </div>
   </nav>
+  
 
 
 <?php 
@@ -79,14 +90,6 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js"></script>
- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
- <script src="<?php echo BASE_URL?>assets/js/teste.js" type="text/javascript"></script>
- <script type="text/javascript" src="<?php echo BASE_URL?>assets/js/feedback.js"></script>
- <script type="text/javascript" src="<?php echo BASE_URL?>assets/js/cadastro_feed.js"></script>
- <script type="text/javascript" src="<?php echo BASE_URL?>assets/js/lancarFeed.js"></script>
  
 
 </body>

@@ -13,11 +13,11 @@
             if(isset($_GET['id'])){
 
                $id = $_GET['id'];
-               $dados['dados'] = $_GET['id']; 
+              
+               $data = $a->calcularIdadeFilme($id);
 
-               $data = $a->buscar_detalhe($id);
+               $dados['dados'] = $data; 
 
-            
 
             }
 

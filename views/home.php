@@ -2,16 +2,28 @@
 
    <div class="container mt-5">
         <div class="row g-4" id="cards-container">
+                <div class="loader" style="display: NONE;"></div>
+
             <!-- Os cards serão gerados dinamicamente aqui -->
         </div>
     </div>
 
     <script>
         $(document).ready(function () {
+        //let baseUrl = 
+         let baseUrl = $('body').data('base-url');
+       // console.log(baseUrl);
         $.ajax({
-        url: "http://localhost/filmes/api/buscar_filme", 
+
+        url:baseUrl+"/api/buscar_filme", 
         dataType: "json",
         type: 'GET',
+
+         beforeSend:function(){
+            $("#loadingIcon").show();
+          },
+
+
         success: function (response) {
                let img = '';
                let dt = response['results'];
@@ -50,7 +62,7 @@
               });
 
         },
-        error: function (xhr, status, error) {
+        error: function (error) {
             console.error("Error:", error); 
         }
         });
@@ -64,4 +76,3 @@
     <p>© 2025 Catálogo de Filmes. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

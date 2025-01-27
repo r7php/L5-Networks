@@ -1,0 +1,19 @@
+PRIMEIRO CRIE UM BANCO e DEPOIS A TABELA NO SEU MYSQL
+ 
+CREATE DATABASE filmes
+
+
+CREATE TABLE TB_LOG(
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+msg varchar(100),
+dt_inserido datetime
+)
+
+Os erros de retorno de api serão armazenados nessa tabela, faça um teste colocando um caminho invalido de api no controller buscar_tudo()
+
+
+
+O projeto precisa está na porta 80 na sua máquina local
+depois disso funcionarar normalmente
+
+http://localhost/L5-Networks

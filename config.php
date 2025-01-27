@@ -2,7 +2,7 @@
 require 'environment.php';
 
 $config = array();
-define("BASE_URL","localhost:80/Filmes");
+define("BASE_URL","http://localhost:80/L5-Networks/");
 
 // if(ENVIRONMENT == 'development'){
 // 	define("BASE_URL","http://localhost/mvc(2)/");
@@ -23,22 +23,23 @@ define("BASE_URL","localhost:80/Filmes");
 global $db;
 
 
+try{
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "test";
-
-$db = new mysqli($servername, $username, $password, $database);
+$database = "filmes";
 
 
-//$db = new PDO("mysql:dbname=".$config['dbname'].";host=".$config['host'], $config['dbuser'], $config['dbpass']);
+//$db = new mysqli($servername, $username, $password, $database);
+$db = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
 
 
-// }
-// catch(PDOException $e){
-// 	echo "Erro:".$e->getMessage();
-// 	die;
-// }
+
+}
+catch(Exepction $e){
+	echo $e;	
+}
+
 
 
 ?>

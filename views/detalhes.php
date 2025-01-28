@@ -98,19 +98,18 @@ $tempo_filme = $dados; // calculado no backend
 
 
 <style>
-  /* Imagem Fixa ao lado do card */
+  
   .fixed-image {
     position: sticky;
-    top: 50px;  /* Ajuste a posição vertical conforme necessário */
-    width: 100%; /* Garante que a imagem não ultrapasse o limite da coluna */
-    height: 400px; /* Tamanho fixo para a imagem */
+    top: 50px; 
+    width: 100%;
+    height: 400px; 
     object-fit: cover;
     border-radius: 10px;
     padding: 200px;
     z-index: 1;
   }
   
-  /* Ajuste a margem para evitar que o conteúdo do card sobreponha a imagem */
   .container {
     display: flex;
     flex-direction: row;
